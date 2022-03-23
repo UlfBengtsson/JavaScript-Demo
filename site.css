@@ -1,4 +1,13 @@
+#cubeHolder {
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    border: 3px solid black;
+}
+
 .cube {
-    width: 10px;
-    height: 10px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 3px 3px gray;
+    float: left;
 }
