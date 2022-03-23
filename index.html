@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>JavaScript Demo</title>
-        <link rel="stylesheet" href="site.css" />
+        <link rel="stylesheet" href="/css/site.css" />
     </head>
     <body>
         <h1 id="welcomeHeadline">Hello world!</h1>
@@ -32,6 +32,11 @@
 
         <button onclick="changeBackgroundColor()">Change background</button>
 
+        <hr />
+        <select name="cubeSelected" id="cubeSelected">
+            <option value="purpleCube">Purple Cube</option>
+            <option value="greenCube">Green Cube</option>
+        </select>
         <button onclick="makeCube()">Make cube</button>
 
         <hr />
@@ -61,6 +66,9 @@
             var selectorColor = document.getElementById(
                 "backgroundColorSelected"
             );
+
+            var cubeSelected = document.getElementById("cubeSelected");
+
             function changeBackgroundColor() {
                 //console.log("my function changeBackgroundColor was triggerd");
 
@@ -72,8 +80,8 @@
 
             function makeCube() {
                 let divCube = document.createElement("div");
-                divCube.className = "cube";
-                divCube.style.backgroundColor = selectorColor.value;
+                divCube.className = "cube"; //treats all css classes on the element as one long string of text
+                divCube.classList.add(cubeSelected.value); //treats all css classes on the element as a list that we can add/remove from
                 document.getElementById("cubeHolder").appendChild(divCube);
             }
         </script>

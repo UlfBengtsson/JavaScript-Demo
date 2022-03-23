@@ -1,0 +1,20 @@
+#cubeHolder {
+    background-color: white;
+    height: 530px;
+    width: 430px;
+    border: 3px solid black;
+}
+
+.cube {
+    width: 53px;
+    height: 42px;
+    float: left;
+}
+
+.purpleCube {
+    background-image: url(/img/box.png);
+}
+
+.greenCube {
+    background-image: url(/img/boxHome.png);
+}
