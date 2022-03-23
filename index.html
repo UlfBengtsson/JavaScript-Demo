@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript Demo</title>
+        <link rel="stylesheet" href="site.css" />
+    </head>
+    <body>
+        <h1 id="welcomeHeadline">Hello world!</h1>
+        <hr />
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
+            amet, saepe nesciunt ipsam sed at. Adipisci quas neque accusantium
+            quisquam voluptatum veniam dolorem soluta dicta delectus, illo
+            consequuntur nostrum necessitatibus?
+        </p>
+        <hr />
+        <p class="makeBig">some other text that is not lorem.</p>
+        <hr />
+        <p>just gona hit the keyboard: sdlfhdjioghjkfdgkdafhgkdfgjfhdaggob</p>
+        <hr />
+        <p class="makeBig">
+            just gona hit the keyboard: fghjdlfkgjkjdfgljldfglkdafklgjlfdg
+        </p>
+        <hr />
+        <p>Pick a background color for the page</p>
+        <select name="backgroundColorSelected" id="backgroundColorSelected">
+            <option value="lightgray">Light gray</option>
+            <option value="lightpink">Light pink</option>
+            <option value="lightcyan">Light cyan</option>
+        </select>
+
+        <button onclick="changeBackgroundColor()">Change background</button>
+
+        <button onclick="makeCube()">Make cube</button>
+
+        <hr />
+
+        <div
+            id="cubeHolder"
+            style="background-color: white; height: 100px; width: 100px"
+        ></div>
+
+        <script>
+            document.body.style.margin = "20px";
+            document.body.style.backgroundColor = "lightgray";
+
+            var welcomeH1 = document.getElementById("welcomeHeadline");
+            welcomeH1.style.color = "blue";
+            welcomeH1.innerHTML = "Hello World wide web!";
+
+            var listOfParagrafhs = document.getElementsByTagName("p");
+
+            for (let index = 0; index < listOfParagrafhs.length; index++) {
+                listOfParagrafhs[index].style.color = "red";
+            }
+
+            var makeBigList = document.getElementsByClassName("makeBig");
+
+            for (let index = 0; index < makeBigList.length; index++) {
+                makeBigList[index].style.fontSize = "35px";
+            }
+
+            var selectorColor = document.getElementById(
+                "backgroundColorSelected"
+            );
+            function changeBackgroundColor() {
+                //console.log("my function changeBackgroundColor was triggerd");
+
+                //console.log("selector element: ", selectorColor);
+                //console.log("color value is:", selectorColor.value);
+
+                document.body.style.backgroundColor = selectorColor.value;
+            }
+
+            function makeCube() {
+                let divCube = document.createElement("div");
+                divCube.className = "cube";
+                divCube.style.backgroundColor = selectorColor.value;
+                document.getElementById("cubeHolder").appendChild(divCube);
+            }
+        </script>
+    </body>
+</html>
