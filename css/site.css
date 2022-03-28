@@ -18,3 +18,20 @@
 .greenCube {
     background-image: url(/img/boxHome.png);
 }
+
+.ligthOrbArray {
+    width: 165px;
+    height: 15px;
+    background-color: #4c0000;
+    position: absolute;
+    top: 142px;
+    left: 182px;
+}
+.ligthOrb {
+    width: 20.23px;
+    float: left;
+    height: 15px;
+}
+.ligthOrbOn {
+    background-color: #aa0000;
+}
