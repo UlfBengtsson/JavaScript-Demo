@@ -31,7 +31,9 @@
     width: 20.23px;
     float: left;
     height: 15px;
+    transition: background-color 70ms;
 }
 .ligthOrbOn {
     background-color: #aa0000;
+    box-shadow: 0 0 7px #4c0000 inset;
 }
